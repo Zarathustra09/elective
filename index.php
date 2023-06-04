@@ -1,37 +1,11 @@
 <?php
   
-
   require_once 'config/connection.php';
-
-
 
   $display_all = "SELECT * FROM employee_data";
   $query = mysqli_query($connection, $display_all);
 
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -100,8 +74,6 @@
 
 <body>
 
-
-  
   <main>
   <div class="container">
     <table class="table table-striped" style="overflow: auto; height: 700px">
@@ -149,10 +121,18 @@
   <div class="container">
     <div class="row btn-container">
       <div class="col">
-      <a href="#" class="btn btn-success">Export as Excel</a>
+
+      <form method="post" action="export.php">
+      <input type="submit" name="export" class="btn btn-success" value="Export" />
+      </form>
+
       </div>
       <div class="col">
-      <a href="#" class="btn btn-success">Import as Excel</a>
+
+      <form method="post" action="export.php">
+      <input type="submit" name="export" class="btn btn-success" value="Export" />
+      </form>
+
       </div>
     </div>
   </div>
