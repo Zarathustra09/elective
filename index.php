@@ -13,59 +13,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Simple Homepage</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    
-    h1 {
-      margin: 0;
-      font-size: 28px;
-    }
-    
-    nav {
-      background-color: #f2f2f2;
-      text-align: center;
-      padding: 10px;
-    }
-    
-    nav a {
-      text-decoration: none;
-      color: #333;
-      padding: 10px;
-    }
-    
-    nav a:hover {
-      background-color: #ccc;
-    }
-    
-    main {
-      padding: 20px;
-      text-align: center;
-    }
-    
-    footer {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-  </style>
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="styles/style.css" rel="stylesheet">
+ 
 </head>
-
-
-
-
 
 
 <?php
@@ -129,7 +83,7 @@
       </div>
       <div class="col">
 
-      <form method="post" action="export.php">
+      <form method="post" action="email.php">
       <input type="submit" name="export" class="btn btn-success" value="Export" />
       </form>
 
