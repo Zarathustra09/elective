@@ -2,7 +2,7 @@
   
   require_once 'config/connection.php';
 
-  $display_all = "SELECT * FROM employee_data";
+  $display_all = "SELECT * FROM employee_login";
   $query = mysqli_query($connection, $display_all);
 
 ?>
@@ -54,7 +54,7 @@
           <td><?php echo $rows['age']; ?></td>
           <td><?php echo $rows['sex']; ?></td>
           <td><?php echo $rows['department']; ?></td>
-          <td><?php echo $rows['salary']; ?></td>
+    
 
         </tr>
         <?php } ?>
