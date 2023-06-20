@@ -31,7 +31,7 @@
             header("location: index.php");
             $_SESSION['id'] = $user['id'];
             $_SESSION['username'] = $user['username'];
-            $_SESSION['message'] = "You are now Logged in as an Admin!";
+            $_SESSION['user'] = "Admin";
             
 
         }
@@ -39,7 +39,7 @@
             header('location: index.php');
             $_SESSION['id'] = $user['id'];
             $_SESSION['username'] = $user['username'];
-            $_SESSION['message'] = "You are now Logged in as a Student!";
+            $_SESSION['user'] = "User";
         }
        
     }

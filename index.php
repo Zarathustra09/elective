@@ -38,7 +38,8 @@
           <th>Age</th>
           <th>Sex</th>
           <th>Department</th>
-          <th>Salary</th>
+          <th>User Type</th>
+         
          
         </tr>
       </thead>
@@ -54,6 +55,7 @@
           <td><?php echo $rows['age']; ?></td>
           <td><?php echo $rows['sex']; ?></td>
           <td><?php echo $rows['department']; ?></td>
+          <td><?php echo $rows['userType']; ?></td>
     
 
         </tr>
@@ -101,9 +103,7 @@
 
 
 
-  <?php
-	include ('includes/footer.html');
-  ?>
+  
 
 
 </body>
