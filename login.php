@@ -1,5 +1,5 @@
 <?php
-
+    session_start();
     require_once 'config/connection.php';
 
 
@@ -27,19 +27,19 @@
         $user = $result -> fetch_assoc();
 
 
-        if(hash('md5',$password) == $user['password']){
+        if(hash('md5',$password) == $user['password'] and $user['userType'] == "User"){
             header("location: index.php");
             $_SESSION['id'] = $user['id'];
             $_SESSION['username'] = $user['username'];
-            $_SESSION['user'] = "Admin";
+            $_SESSION['user'] = $user['userType'];
             
 
         }
-        elseif(hash('md5',$password) == $user['password']){
-            header('location: index.php');
+        elseif(hash('md5',$password) == $user['password'] and $user['userType'] == "Admin"){
+            header('location: adminIndex.php');
             $_SESSION['id'] = $user['id'];
             $_SESSION['username'] = $user['username'];
-            $_SESSION['user'] = "User";
+            $_SESSION['user'] = $user['userType'];
         }
        
     }
@@ -61,6 +61,7 @@
 <head>
     <title>Login Page</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         .login-box {
             width: 400px;

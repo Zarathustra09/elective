@@ -2,13 +2,11 @@
   session_start();
   require_once 'config/connection.php';
 
-  $user =  $_SESSION['username'];
-  $display_all = "SELECT * FROM employee_data where username = '$user'";
+
+  $display_all = "SELECT * FROM employee_data";
   $query = mysqli_query($connection, $display_all);
 
 ?>
-
-
 
 
 <!DOCTYPE html>
@@ -33,7 +31,7 @@
 
   <main>
   <div class="container">
-    <table class="table table-striped" style="overflow: auto;">
+    <table class="table table-striped" style="overflow: auto; height: 700px">
       <thead class="thead-dark">
         
         <tr>
@@ -41,10 +39,8 @@
           <th>Department</th>
           <th>Salary</th>
           <th>Date</th>
-       
          
-         
-        </tr> 
+        </tr>
       </thead>
       <tbody>
         <tr>
@@ -95,9 +91,17 @@
     </div>
   </div>
 
+
+
   </center>
- 
+
+
+  
 <br><br><br>
+
+
+
+  
 
 
 </body>
